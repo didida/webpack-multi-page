@@ -19,6 +19,6 @@ npm run dev
 npm run build
 ```
 
-### 在npm run dev后即可访问本地服务器home(http://localhost:8080/home.html)
+###### 在npm run dev后即可访问本地服务器home(http://localhost:8080/home.html)
 
 
