@@ -1,5 +1,4 @@
 var path = require('path')
-var glob = require('glob')
 var utils = require('./utils')
 var config = require('../config')
 var projectRoot = path.resolve(__dirname, '../')

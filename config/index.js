@@ -1,5 +1,4 @@
 var path = require('path')
-var glob = require('glob')
 
 var build = {
   env: require('./prod.env'),
@@ -24,6 +23,6 @@ var dev = {
 }
 
 module.exports = {
-  dev: dev,
-  build: build
+  dev,
+  build
 }

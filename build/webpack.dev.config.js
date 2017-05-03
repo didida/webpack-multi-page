@@ -9,9 +9,6 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-var glob = require('glob')
-var path = require('path')
-
 // 添加热重载插件
 Object.keys(baseWebpackConfig.entry).forEach(function (name) {
   baseWebpackConfig.entry[name] = ['./build/dev-client.js'].concat(baseWebpackConfig.entry[name])
@@ -41,7 +38,7 @@ for (var pathName in pages) {
     template: pages[pathName],
     inject: false,
     excludeChunks: Object.keys(pages).filter(item => {
-      return (item !== pathName)
+      return item !== pathName
     })
   }
 
