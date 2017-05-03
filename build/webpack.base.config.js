@@ -25,14 +25,14 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.js$/,
-      //   loader: 'eslint-loader',
-      //   include: [resolve('src')],
-      //   options: {
-      //     formatter: require('eslint-friendly-formatter') // eslint规则插件
-      //   }
-      // },
+      {
+        test: /\.js$/,
+        loader: 'eslint-loader',
+        include: [resolve('src')],
+        options: {
+          formatter: require('eslint-friendly-formatter') // eslint规则插件
+        }
+      },
       {
         test: /\.js$/,
         loader: 'babel-loader',

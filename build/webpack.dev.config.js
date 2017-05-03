@@ -39,9 +39,9 @@ for (var pathName in pages) {
   var conf = {
     filename: pathName + '.html',
     template: pages[pathName],
-    inject: true,
+    inject: false,
     excludeChunks: Object.keys(pages).filter(item => {
-      return (item != pathName)
+      return (item !== pathName)
     })
   }
 
