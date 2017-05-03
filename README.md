@@ -4,7 +4,7 @@ webpack-multi-page
 
 #### 1. 安装依赖
 ```
-yarn || cnpm i
+yarn || cnpm i || npm i
 ```
   
 #### 2. 本地环境
