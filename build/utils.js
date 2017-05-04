@@ -30,7 +30,15 @@ exports.cssLoaders = function (options) {
       })
     }
 
-    return loaders
+    if (options.extract) {
+      return ExtractTextPlugin.extract({
+        use: loaders,
+        fallback: 'vue-style-loader'
+      })
+    } else {
+      return ['vue-style-loader'].concat(loaders)
+    }
+    // return loaders
   }
 
   return {

@@ -36,10 +36,8 @@ for (var pathName in pages) {
   var conf = {
     filename: pathName + '.html',
     template: pages[pathName],
-    inject: false,
-    excludeChunks: Object.keys(pages).filter(item => {
-      return item !== pathName
-    })
+    inject: true,
+    excludeChunks: Object.keys(pages).filter(item => item !== pathName)
   }
 
   module.exports.plugins.push(new HtmlWebpackPlugin(conf))

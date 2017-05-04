@@ -1,6 +1,7 @@
 var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
+var vueLoaderConfig = require('./vueLoaderConfig')
 var projectRoot = path.resolve(__dirname, '../')
 
 function resolve (dir) {
@@ -17,7 +18,7 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.json'],
+    extensions: ['.js', '.json', '.vue'],
     alias: {
       '@': resolve('src')
     }
@@ -31,6 +32,11 @@ module.exports = {
         options: {
           formatter: require('eslint-friendly-formatter') // eslint规则插件
         }
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: vueLoaderConfig
       },
       {
         test: /\.js$/,

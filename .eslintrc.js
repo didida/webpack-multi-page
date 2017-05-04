@@ -239,7 +239,7 @@ module.exports = {
         'no-console': 'off',
 
         // enforce consistent spacing before function definition opening parenthesis
-        'space-before-function-paren': [2, 'always'],
+        'space-before-function-paren': 'off',
         
         // enforce consistent spacing inside parentheses
         'space-in-parens': [2, 'never'],
@@ -289,7 +289,7 @@ module.exports = {
         'no-var': 'off',
 
         // require or disallow method and property shorthand syntax for object literals
-        'object-shorthand': 'error',
+        'object-shorthand': 'off',
 
         // require arrow functions as callbacks
         'prefer-arrow-callback': 'off',
