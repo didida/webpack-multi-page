@@ -8,7 +8,7 @@ function resolve (dir) {
 }
 
 module.exports = {
-  entry: utils.getEntries('./src/module/**/*.js'),
+  entry: utils.getEntries('./src/module/**/*.ts'),
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -17,7 +17,7 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.json'],
+    extensions: ['.js', '.json', '.ts'],
     alias: {
       '@': resolve('src')
     }
@@ -25,7 +25,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|ts)$/,
         loader: 'eslint-loader',
         include: [resolve('src')],
         options: {
@@ -37,6 +37,16 @@ module.exports = {
         loader: 'babel-loader',
         include: projectRoot,
         exclude: /node_modules/
+      },
+      {
+        test: /\.js$/,
+        loader: 'source-map-loader',
+        include: /rxjs/,
+        enforce: 'pre',
+      },
+      {
+        test: /\.ts$/,
+        use: 'awesome-typescript-loader'
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

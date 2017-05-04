@@ -8,6 +8,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 // webpack错误信息插件
 var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var { CheckerPlugin } = require('awesome-typescript-loader') // ts插件
 
 // 添加热重载插件
 Object.keys(baseWebpackConfig.entry).forEach(function (name) {
@@ -20,6 +21,7 @@ module.exports = merge(baseWebpackConfig, {
   },
   devtool: '#cheap-module-eval-source-map',
   plugins: [
+    new CheckerPlugin(),
     new webpack.DefinePlugin({
       'process.env': config.dev.env
     }),

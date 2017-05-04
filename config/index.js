@@ -14,7 +14,7 @@ var build = {
 
 var dev = {
   env: require('./dev.env'),
-  port: 8080,
+  port: 8181,
   autoOpenBrowser: true,
   assetsSubDirectory: 'static',
   assetsPublicPath: '/',

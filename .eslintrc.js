@@ -189,10 +189,10 @@ module.exports = {
         'keyword-spacing': 'error',
 
         // enforce consistent linebreak style
-        'linebreak-style': 'error',
+        'linebreak-style': 'off',
 
         // require or disallow newlines around directives
-        'lines-around-directive': 'error',
+        'lines-around-directive': 'off',
 
         // require constructor names to begin with a capital letter
         'new-cap': 'off',
@@ -222,10 +222,10 @@ module.exports = {
         'padded-blocks': ['error', 'never'],
 
         // require quotes around object literal property names
-        'quote-props': ['error', 'as-needed'],
+        // 'quote-props': ['off'],
 
         // enforce the consistent use of either backticks, double, or single quotes
-        quotes: ['error', 'single'],
+        quotes: ['off', 'single'],
 
         // enforce consistent spacing before and after semicolons
         'semi-spacing': 'error',
