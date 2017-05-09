@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    {{msg}}
+  <div id="app" class="app">
+    <span class="app-title is-active">{{msg}}</span>
   </div>
 </template>
 
@@ -9,19 +9,14 @@ export default {
   name: 'app',
   data: () => (
     {
-      msg: '李伟'
+      msg: '真帅'
     }
   )
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="css">
+  @block app-title {
+    display: flex;
+  }
 </style>
