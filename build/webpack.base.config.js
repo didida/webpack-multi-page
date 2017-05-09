@@ -2,7 +2,7 @@ var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vueLoaderConfig')
-var projectRoot = path.resolve(__dirname, '../')
+var projectRoot = path.resolve(__dirname, '../src')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -20,6 +20,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json', '.vue'],
     alias: {
+      'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src')
     }
   },
@@ -41,8 +42,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: projectRoot,
-        exclude: /node_modules/
+        include: projectRoot
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

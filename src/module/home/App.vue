@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import 'animate.css'
 export default {
   name: 'app',
   data: () => (
